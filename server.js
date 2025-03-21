@@ -20,9 +20,6 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(morgan('dev'));
-app.use(cors({
-  origin: '*'
-}));
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI)
